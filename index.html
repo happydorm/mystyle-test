@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>기숙사 유형 테스트</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="app">
+  <section id="start" class="screen active">
+    <div class="poster">
+      <img src="start-main.png" alt="기숙사 유형 테스트">
+      <button id="startBtn" class="real-start-btn" type="button">테스트 시작하기 <span>›</span></button>
+    </div>
+  </section>
+
+  <section id="quiz" class="screen">
+    <header class="quiz-top">
+      <button class="icon-btn" id="backBtn" type="button">←</button>
+      <div class="quiz-progress">
+        <div class="progress-meta"><span>기숙사 유형 테스트</span><strong id="progressText">1 / 8</strong></div>
+        <div class="progress-track"><div id="progressBar"></div></div>
+      </div>
+      <button class="exit-btn" id="exitBtn" type="button">나가기</button>
+    </header>
+    <div class="question-area">
+      <div class="question-label">QUESTION <span id="questionNumber">01</span></div>
+      <h2 id="questionText"></h2>
+      <p class="question-hint">가장 나다운 답변 하나를 골라주세요.</p>
+      <div class="answers" id="answers"></div>
+    </div>
+    <div class="quiz-foot"><span id="questionDots"></span></div>
+  </section>
+
+  <section id="loading" class="screen loading">
+    <div class="loading-card">
+      <div class="loading-orbit"><span></span></div>
+      <p class="label">MY DORM TYPE</p>
+      <h2>당신의 기숙사 생활을<br>살펴보고 있어요.</h2>
+      <p>답변을 바탕으로 생활 스타일을 정리하는 중이에요.</p>
+    </div>
+  </section>
+
+  <section id="result" class="screen">
+    <div class="result-top">
+      <span class="label">MY DORM TYPE</span>
+      <h1>나의 기숙사 생활 스타일</h1>
+      <p>답변을 바탕으로 알아본 나의 유형이에요.</p>
+    </div>
+    <div class="result-hero">
+      <div class="result-copy">
+        <span id="resultTag" class="result-tag"></span>
+        <h2 id="resultTitle"></h2>
+        <div class="quote" id="resultQuote"></div>
+        <p id="resultOneLiner"></p>
+        <div class="hashtags" id="hashtags"></div>
+      </div>
+      <div class="result-mascot-wrap">
+        <div class="result-circle"></div>
+        <img id="resultMascot" src="dreambye-clean.png" alt="꿈별이">
+      </div>
+    </div>
+    <div class="result-grid">
+      <article class="info-card"><div class="card-icon">✦</div><h3>이런 모습이 있어요</h3><ul id="traits"></ul></article>
+    </div>
+    <div class="result-actions">
+      <button class="main-btn" id="retryBtn" type="button">다시 테스트하기 <b>↻</b></button>
+      <button class="sub-btn" id="copyBtn" type="button">결과 문구 복사하기</button>
+    </div>
+  </section>
+</main>
+<div id="toast" class="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>
